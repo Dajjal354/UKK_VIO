@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -185,6 +185,108 @@
     })
 </script>
 
+<style>
+/* Previous theme variables and base styles remain... */
+
+/* Right-aligned Sidebar Layout Modifications */
+#wrapper {
+  flex-direction: row-reverse;
+}
+
+/* Sidebar Positioning */
+.sidebar {
+  right: 0;
+  left: auto;
+  border-right: none;
+  border-left: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Content Wrapper Adjustments */
+#content-wrapper {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Sidebar Toggle Button */
+.sidebar.toggled {
+  margin-right: -14rem;
+}
+
+/* Adjust Dropdown Menus */
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* Transform Hover Effects */
+.sidebar .nav-item:hover {
+  transform: translateX(-5px) !important;
+}
+
+.collapse-inner .collapse-item:hover {
+  transform: translateX(-5px) !important;
+}
+
+/* Adjust Sidebar Content Alignment */
+.sidebar .sidebar-brand,
+.sidebar .nav-item .nav-link,
+.sidebar-heading {
+  text-align: right;
+}
+
+.sidebar .nav-item .nav-link i {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Adjust Collapse Menu */
+.collapse-inner {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+/* Adjust Divider Gradient */
+.sidebar-divider {
+  background: linear-gradient(-90deg, transparent, var(--accent-color), transparent);
+}
+
+/* Adjust Heading Line */
+.sidebar-heading::after {
+  right: 1.5rem;
+  left: auto;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .sidebar.toggled {
+    overflow: visible;
+    width: 6.5rem !important;
+    margin-right: 0;
+  }
+
+  .sidebar.toggled .nav-item .nav-link {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .sidebar.toggled .nav-item .nav-link i {
+    margin-left: 0;
+    font-size: 1.25rem;
+  }
+}
+
+/* Topbar Adjustments */
+.topbar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Scroll to Top Button Adjustment */
+.scroll-to-top {
+  right: auto;
+  left: 1rem;
+}
+</style>
 </body>
 
 </html>

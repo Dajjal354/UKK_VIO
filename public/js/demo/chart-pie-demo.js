@@ -5,13 +5,13 @@ Chart.defaults.global.defaultFontColor = '#858796';
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'pie', // Ubah tipe chart menjadi 'pie'
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["PT", "CV", "FIRMA", "UD"],
     datasets: [{
-      data: [55, 30, 15],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      data: [55, 30, 15, 10],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#e74a3b'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -28,8 +28,7 @@ var myPieChart = new Chart(ctx, {
       caretPadding: 10,
     },
     legend: {
-      display: false
+      display: true, // Untuk chart pie biasanya legend ditampilkan
     },
-    cutoutPercentage: 80,
   },
 });

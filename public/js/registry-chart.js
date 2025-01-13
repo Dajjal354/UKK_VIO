@@ -15,7 +15,7 @@ class UserRegistryChart {
         }
 
         this.chartInstance = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: data.dates,
                 datasets: [{
