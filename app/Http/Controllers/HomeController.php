@@ -14,9 +14,13 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['welcome']);
     }
   
+    public function welcome(): View
+    {
+        return view('users.home');
+    }
     /**
      * Show the application dashboard.
      *
