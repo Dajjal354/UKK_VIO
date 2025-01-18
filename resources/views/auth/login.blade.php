@@ -93,16 +93,33 @@
                             </a>
                         @endif
 
-                        <x-primary-button class="w-full sm:w-auto bg-gradient-to-r from-blue-500/80 via-purple-500/80 to-pink-500/80 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:opacity-90 transform transition duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            {{ __('Log in') }}
-                        </x-primary-button>
-                    </div>
-                </form>
-            </div>
+                    <x-primary-button class="mt-4 bg-gradient-to-r from-blue-600 to-pink-500 text-white px-6 py-3 rounded-lg hover:opacity-90 transform transition duration-500 hover:scale-105">
+                        {{ __('Log in') }}
+                    </x-primary-button>
+                </div>
+            </form>
         </div>
     </div>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ asset('video/video.org.ketik.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 
     <style>
+        body {
+            background: url('https://www.enago.com/academy/wp-content/uploads/2017/09/Background.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(to right, #3b82f6, #9333ea, #f43f5e);
+        }
+
         #bg-video {
             position: fixed;
             right: 0;
@@ -110,32 +127,6 @@
             min-width: 100%;
             min-height: 100%;
             z-index: -1;
-        }
-
-        /* Custom input styles */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus {
-            -webkit-text-fill-color: white;
-            -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
-            transition: background-color 5000s ease-in-out 0s;
-        }
-
-        /* Smooth transitions */
-        .transition-all {
-            transition-property: all;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 300ms;
-        }
-
-        /* Glass effect */
-        .backdrop-blur-sm {
-            backdrop-filter: blur(8px);
-        }
-
-        /* Input placeholder color */
-        ::placeholder {
-            color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </x-guest-layout>

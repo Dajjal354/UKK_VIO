@@ -43,10 +43,8 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="mt-4">
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <a href="{{ route('admin.program-keahlian.index') }}" class="btn btn-secondary">Kembali</a>
-                        </div>
                     </form>
                 </div>
             </div>

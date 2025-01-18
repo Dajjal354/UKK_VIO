@@ -11,7 +11,7 @@
 
     <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
         @csrf
-        
+        @method('put')
 
         <div>
             <x-input-label for="update_password_current_password" :value="__('Current Password')" />
@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button class="btn btn-primary">{{ __('Save') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
                 <p
